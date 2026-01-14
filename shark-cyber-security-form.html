@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>SCS • Secure Cyber Sector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;font-family:'Hind Siliguri',sans-serif;color:#fff;overflow-x:hidden;animation:backgroundShift 20s infinite linear;}
+@keyframes backgroundShift {0% {background: linear-gradient(120deg, #1e3c72, #2a5298);}25% {background: linear-gradient(120deg, #2c5364, #0f2027);}50% {background: linear-gradient(120deg, #200122, #6f0000);}75% {background: linear-gradient(120deg, #434343, #000000);}100% {background: linear-gradient(120deg, #1e3c72, #2a5298);}}
+.wrap{max-width:500px;margin:50px auto;padding:30px;background:rgba(0,0,0,0.4);border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,0.7);position:relative;animation:fadeIn 2s ease-in-out}
+@keyframes fadeIn {0%{opacity:0;transform:translateY(-20px);}100%{opacity:1;transform:translateY(0);}}
+.logo-header{text-align:center;margin-top:20px;}
+.logo-circle{width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 10px auto;border:3px solid #fff;animation:logoBounce 2s infinite alternate;transition:0.4s;}
+.logo-circle:hover{box-shadow:0 0 20px #00f2ff,0 0 40px #7f00ff;transform:scale(1.1) translateY(-5px);}
+.logo-circle img{width:100%;height:100%;object-fit:cover;}
+@keyframes logoBounce {0%{transform:translateY(0);}100%{transform:translateY(-5px);}}
+.header h1{font-family:'Orbitron',monospace;font-size:32px;color:#fff;letter-spacing:3px;animation:textGlow 2s infinite alternate;margin:0}
+@keyframes textGlow {0%{text-shadow:0 0 5px #00f2ff,0 0 10px #7f00ff;}100%{text-shadow:0 0 20px #00f2ff,0 0 40px #7f00ff;}}
+.header p{font-size:16px;color:#d1d5db;line-height:1.4;font-weight:600;margin-top:5px}
+.sys{text-align:center;font-family:'Orbitron',monospace;font-size:13px;color:#e0e0e0;margin:15px 0;animation:sysBlink 1.5s infinite;}
+@keyframes sysBlink {0%,50%,100%{opacity:1;}25%,75%{opacity:0.4;}}
+.group{margin-bottom:15px}
+.group span{font-size:12px;color:#f0f0f0;display:block;margin-bottom:5px}
+.group input,.group select{width:100%;padding:12px;border:none;border-radius:10px;background:rgba(255,255,255,0.15);color:#fff;outline:none;transition:0.3s;}
+.group input:focus,.group select:focus{background:rgba(255,255,255,0.25);transform:scale(1.02)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.upload{display:flex;gap:10px;margin:20px 0}
+.upload label{flex:1;padding:12px;text-align:center;border-radius:12px;background:rgba(255,255,255,0.2);cursor:pointer;font-size:12px;transition:0.3s;}
+.upload label:hover{background:rgba(255,255,255,0.35);transform:scale(1.05);}
+button{width:100%;padding:15px;border:none;border-radius:15px;background:linear-gradient(135deg,#ff7eb3,#ff758c);color:#fff;font-weight:700;font-size:16px;letter-spacing:1px;cursor:pointer;transition:0.3s;animation:buttonPulse 2s infinite alternate;}
+@keyframes buttonPulse{0%{box-shadow:0 0 10px #ff7eb3;}100%{box-shadow:0 0 25px #ff758c;}}
+button:hover{transform:scale(1.05)}
+.footer{text-align:center;font-size:11px;color:#cbd5e1;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo-header">
+    <div class="logo-circle">
+      <img src="https://i.imgur.com/O311Xq8.jpeg" alt="SCS Logo">
+    </div>
+    <div class="header">
+      <h1>⟦ S C S ⟧</h1>
+      <p>Shark Cyber Security - Protecting your digital world with advanced security solutions and services for everyone.</p>
+    </div>
+  </div>
+  <div class="sys">
+    ⌁• এসসিএস রেজিস্ট্রেশন ফর্ম •⌁<br>
+    ⌁• SCS Registration Form •⌁
+  </div>
+  <form id="scsForm">
+    <div class="group">
+      <span>👤 নাম / Name</span>
+      <input type="text" name="name" placeholder="আপনার নাম / Your Name" required>
+    </div>
+    <div class="group">
+      <span>🧩 রেফারেন্স / Reference</span>
+      <input type="text" name="reference" placeholder="রেফারেন্স / Reference">
+    </div>
+    <div class="grid">
+      <div class="group">
+        <span>📍 জেলা / District</span>
+        <input type="text" name="district" placeholder="জেলা / District" required>
+      </div>
+      <div class="group">
+        <span>📌 উপজেলা / Upazila</span>
+        <input type="text" name="upazila" placeholder="উপজেলা / Upazila" required>
+      </div>
+    </div>
+    <div class="group">
+      <span>🏡 গ্রাম / Village</span>
+      <input type="text" name="village" placeholder="গ্রাম / Village" required>
+    </div>
+    <div class="grid">
+      <div class="group">
+        <span>🎂 বয়স / Age</span>
+        <input type="number" name="age" min="10" max="80" placeholder="বয়স / Age" required>
+      </div>
+      <div class="group">
+        <span>⚧ লিঙ্গ / Gender</span>
+        <select name="gender" required>
+          <option value="">নির্বাচন করুন / Select</option>
+          <option>পুরুষ / Male</option>
+          <option>মহিলা / Female</option>
+          <option>অন্যান্য / Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="group">
+      <span>📞 মোবাইল / Mobile</span>
+      <input type="tel" name="mobile" pattern="01[3-9][0-9]{8}" placeholder="01XXXXXXXXX" required>
+    </div>
+    <div class="group">
+      <span>🌐 ফেসবুক প্রোফাইল / Facebook Profile</span>
+      <input type="url" name="facebook" placeholder="https://facebook.com/username" required>
+    </div>
+    <div class="upload">
+      <label>⬒ ছবি ১ / Image 1<input type="file" name="image1" hidden></label>
+      <label>⬒ ছবি ২ / Image 2<input type="file" name="image2" hidden></label>
+    </div>
+    <button type="submit">▣ সাবমিট / Submit ▣</button>
+  </form>
+  <div class="footer">
+    © 2026 SHARK CYBER SECURITY<br>
+    Secure • Protect • Defend
+  </div>
+</div>
+<script>
+const telegramBotToken = '8472395100:AAHXdUOX4G0KcXcwOfhOiA6acUu94BAIwLM'; // তোমার Bot Token
+const chatId = '6313533050'; // তোমার Chat ID
+
+document.getElementById('scsForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  let message = '┏━━━━━━━━━━━━━━━━━━━━┓\n';
+  message += '┃ 🚀  *New SCS Registration*  🛡️ ┃\n';
+  message += '┗━━━━━━━━━━━━━━━━━━━━┛\n\n';
+
+  formData.forEach((value, key) => {
+    if(key !== 'image1' && key !== 'image2') {
+      message += `*${key.charAt(0).toUpperCase() + key.slice(1)}:* ${value}\n`;
+    }
+  });
+  message += '\n✅ Registration successfully submitted!';
+
+  try {
+    await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({chat_id: chatId, text: message, parse_mode: 'Markdown'})
+    });
+
+    for (let imgField of ['image1','image2']) {
+      const file = formData.get(imgField);
+      if(file && file.size > 0){
+        const reader = new FileReader();
+        await new Promise(resolve => {
+          reader.onload = async function(){
+            const form = new FormData();
+            form.append('chat_id', chatId);
+            form.append('photo', file);
+            form.append('caption', `📷 ${imgField}`);
+            await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendPhoto`, {
+              method: 'POST',
+              body: form
+            });
+            resolve();
+          }
+          reader.readAsDataURL(file);
+        });
+      }
+    }
+
+    alert('✅ Registration Sent with Images!');
+    this.reset();
+
+  } catch(err){
+    console.error(err);
+    alert('❌ Error sending to Telegram');
+  }
+});
+</script>
+</body>
+</html>
