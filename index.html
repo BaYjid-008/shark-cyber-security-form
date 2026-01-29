@@ -1,168 +1,841 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SCS • Secure Cyber Sector</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<title>Shark Cyber Security — Team Members</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{min-height:100vh;font-family:'Hind Siliguri',sans-serif;color:#fff;overflow-x:hidden;animation:backgroundShift 20s infinite linear;}
-@keyframes backgroundShift {0% {background: linear-gradient(120deg, #1e3c72, #2a5298);}25% {background: linear-gradient(120deg, #2c5364, #0f2027);}50% {background: linear-gradient(120deg, #200122, #6f0000);}75% {background: linear-gradient(120deg, #434343, #000000);}100% {background: linear-gradient(120deg, #1e3c72, #2a5298);}}
-.wrap{max-width:500px;margin:50px auto;padding:30px;background:rgba(0,0,0,0.4);border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,0.7);position:relative;animation:fadeIn 2s ease-in-out}
-@keyframes fadeIn {0%{opacity:0;transform:translateY(-20px);}100%{opacity:1;transform:translateY(0);}}
-.logo-header{text-align:center;margin-top:20px;}
-.logo-circle{width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 10px auto;border:3px solid #fff;animation:logoBounce 2s infinite alternate;transition:0.4s;}
-.logo-circle:hover{box-shadow:0 0 20px #00f2ff,0 0 40px #7f00ff;transform:scale(1.1) translateY(-5px);}
-.logo-circle img{width:100%;height:100%;object-fit:cover;}
-@keyframes logoBounce {0%{transform:translateY(0);}100%{transform:translateY(-5px);}}
-.header h1{font-family:'Orbitron',monospace;font-size:32px;color:#fff;letter-spacing:3px;animation:textGlow 2s infinite alternate;margin:0}
-@keyframes textGlow {0%{text-shadow:0 0 5px #00f2ff,0 0 10px #7f00ff;}100%{text-shadow:0 0 20px #00f2ff,0 0 40px #7f00ff;}}
-.header p{font-size:16px;color:#d1d5db;line-height:1.4;font-weight:600;margin-top:5px}
-.sys{text-align:center;font-family:'Orbitron',monospace;font-size:13px;color:#e0e0e0;margin:15px 0;animation:sysBlink 1.5s infinite;}
-@keyframes sysBlink {0%,50%,100%{opacity:1;}25%,75%{opacity:0.4;}}
-.group{margin-bottom:15px}
-.group span{font-size:12px;color:#f0f0f0;display:block;margin-bottom:5px}
-.group input,.group select{width:100%;padding:12px;border:none;border-radius:10px;background:rgba(255,255,255,0.15);color:#fff;outline:none;transition:0.3s;}
-.group input:focus,.group select:focus{background:rgba(255,255,255,0.25);transform:scale(1.02)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.upload{display:flex;gap:10px;margin:20px 0}
-.upload label{flex:1;padding:12px;text-align:center;border-radius:12px;background:rgba(255,255,255,0.2);cursor:pointer;font-size:12px;transition:0.3s;}
-.upload label:hover{background:rgba(255,255,255,0.35);transform:scale(1.05);}
-button{width:100%;padding:15px;border:none;border-radius:15px;background:linear-gradient(135deg,#ff7eb3,#ff758c);color:#fff;font-weight:700;font-size:16px;letter-spacing:1px;cursor:pointer;transition:0.3s;animation:buttonPulse 2s infinite alternate;}
-@keyframes buttonPulse{0%{box-shadow:0 0 10px #ff7eb3;}100%{box-shadow:0 0 25px #ff758c;}}
-button:hover{transform:scale(1.05)}
-.footer{text-align:center;font-size:11px;color:#cbd5e1;margin-top:20px}
+:root{
+  --accent:#00ffd1;
+  --accent2:#ff3d81;
+  --bg:#020409;
+  --text:#dbe9ee;
+  --glass:rgba(255,255,255,0.05);
+}
+*{margin:0; padding:0; box-sizing:border-box; font-family:Inter, system-ui, sans-serif;}
+body{
+  background:url('https://files.catbox.moe/v3gi7z.gif') center center / cover no-repeat fixed;
+  color:var(--text);
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+.wrap{
+  max-width:1300px;
+  margin:auto;
+  padding:22px;
+  backdrop-filter:blur(6px);
+}
+
+/* Top Header with logo + links */
+.top-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+.top-header a{
+  color:var(--accent);
+  font-weight:700;
+  text-decoration:none;
+  margin:0 6px;
+}
+.team-logo{
+  width:120px;
+  border-radius:20px;
+  border:4px solid var(--accent);
+  animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0px);}
+  50%{transform:translateY(-8px);}
+}
+
+/* Music Player */
+.music-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px auto;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 50px;
+  max-width: 500px;
+  border: 1px solid var(--accent);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,255,209,0.3); }
+  50% { box-shadow: 0 0 20px rgba(0,255,209,0.6); }
+}
+.music-controls {
+  display: flex;
+  gap: 10px;
+}
+.music-controls button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.music-controls button:hover {
+  background: rgba(0,255,209,0.2);
+  transform: scale(1.1);
+}
+#volumeControl {
+  width: 100px;
+}
+#musicStatus {
+  font-size: 14px;
+  color: var(--accent);
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Color Animation Background */
+.color-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.1;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional description below logo */
+.header-desc{
+  text-align:center;
+  margin-bottom:20px;
+  color:#9fb4c0;
+  font-size:14px;
+  animation:fadeUp 1s ease both;
+}
+@keyframes fadeUp{
+  0%{opacity:0; transform:translateY(30px);}
+  100%{opacity:1; transform:none;}
+}
+
+/* Options Panel */
+.options{
+  display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:12px;
+}
+.options button{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border:none; padding:8px 14px; border-radius:10px;
+  font-weight:800; cursor:pointer;
+  transition:.3s;
+}
+.options button:hover{transform:scale(1.05);}
+#searchBar{
+  width:100%;
+  padding:10px;
+  margin-bottom:20px;
+  border-radius:10px;
+  border:none;
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+}
+
+/* Call Down System Panel */
+.call-down-panel {
+  background: rgba(10,15,21,0.95);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid var(--accent);
+}
+.call-down-panel h3 {
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.call-down-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.call-down-controls button {
+  background: rgba(0,255,209,.15);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+.call-down-controls button:hover {
+  background: rgba(0,255,209,.3);
+}
+#emergencyCall {
+  background: rgba(255,61,129,.15);
+  border-color: var(--accent2);
+}
+#emergencyCall:hover {
+  background: rgba(255,61,129,.3);
+}
+
+/* Team Grid */
+.team{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:16px;
+  margin-bottom: 30px;
+}
+
+/* Member Card */
+.member{
+  background:rgba(10,15,21,0.95);
+  border-radius:14px;
+  padding:14px;
+  border:1px solid var(--glass);
+  transition:.3s;
+  position:relative;
+  animation: cardAppear 0.5s ease-out;
+}
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.member:hover{transform:translateY(-10px); box-shadow:0 0 35px rgba(0,255,209,.25);}
+.member img{width:100%; height:150px; object-fit:cover; border-radius:10px;}
+.member h4{margin:8px 0 2px;}
+small{color:#9fb4c0;}
+.contact{font-size:12px;margin-top:6px;}
+.contact a{
+  color:var(--accent);
+  text-decoration:none;
+  display:inline-block;
+  margin-right:8px;
+}
+.details{font-size:12px;color:#9fb4c0;margin-top:4px;}
+.stars span{cursor:pointer;font-size:18px;color:#555;}
+.stars span.active{color:gold;}
+.hide{display:none;}
+
+/* Member Information Form */
+.add-member-form {
+  background: rgba(10,15,21,0.95);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid var(--glass);
+}
+.add-member-form h3 {
+  color: var(--accent);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.pin-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.pin-section input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+  width: 150px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.pin-section button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg,var(--accent),var(--accent2));
+  color: #020409;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.form-grid input, .form-grid select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+}
+.form-grid input:focus, .form-grid select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.form-buttons button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: .3s;
+}
+#submitMember {
+  background: linear-gradient(90deg,var(--accent),var(--accent2));
+  color: #020409;
+}
+#submitMember:hover {
+  transform: scale(1.05);
+}
+#clearForm {
+  background: rgba(255,255,255,.1);
+  color: var(--text);
+}
+#clearForm:hover {
+  background: rgba(255,255,255,.2);
+}
+
+/* Scroll Button */
+#scrollBtn{
+  position:fixed; bottom:20px; right:20px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border:none; padding:10px 14px; border-radius:50px; cursor:pointer;
+  font-weight:800; z-index:99;
+  transition:.3s;
+}
+#scrollBtn:hover{transform:scale(1.1);}
+
+/* Footer */
+footer{text-align:center;font-size:13px;color:#9fb4c0;margin-top:20px;}
+
+/* Modal for notifications */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: rgba(10,15,21,0.95);
+  padding: 30px;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+.modal-content h3 {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+#modalClose {
+  background: linear-gradient(90deg,var(--accent),var(--accent2));
+  color: #020409;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
 </style>
 </head>
 <body>
+<!-- Color Animation Background -->
+<div class="color-animation"></div>
+
 <div class="wrap">
-  <div class="logo-header">
-    <div class="logo-circle">
-      <img src="https://i.imgur.com/O311Xq8.jpeg" alt="SCS Logo">
-    </div>
-    <div class="header">
-      <h1>⟦ S C S ⟧</h1>
-      <p>Shark Cyber Security - Protecting your digital world with advanced security solutions and services for everyone.</p>
-    </div>
+
+
+<!-- Top Header with Logo + Links -->
+<div class="top-header">
+  <a href="https://facebook.com/groups/467717995845246/" target="_blank">Public Group</a>
+  <img src="https://i.imgur.com/TtzE0Iu.jpeg" alt="Team Logo" class="team-logo">
+  <a href="https://www.facebook.com/SHARK1HELP1ZONE" target="_blank">Public Page</a>
+</div>
+
+<!-- Optional description -->
+<div class="header-desc">Shark Cyber Security  </div>
+
+<!-- Call Down System -->
+<div class="call-down-panel">
+  <h3>🔔 Team Call Down System</h3>
+  <div class="call-down-controls">
+    <button onclick="callAllMembers()">📢 Call All Members</button>
+    <button onclick="callDepartment('Management')">👔 Call Management</button>
+    <button onclick="callDepartment('Technical')">💻 Call Technical Team</button>
+    <button onclick="callDepartment('Research')">🔬 Call Research Team</button>
+    <button id="emergencyCall" onclick="emergencyCall()">🚨 Emergency Call</button>
   </div>
-  <div class="sys">
-    ⌁• এসসিএস রেজিস্ট্রেশন ফর্ম •⌁<br>
-    ⌁• SCS Registration Form •⌁
-  </div>
-  <form id="scsForm">
-    <div class="group">
-      <span>👤 নাম / Name</span>
-      <input type="text" name="name" placeholder="আপনার নাম / Your Name" required>
-    </div>
-    <div class="group">
-      <span>🧩 রেফারেন্স / Reference</span>
-      <input type="text" name="reference" placeholder="রেফারেন্স / Reference">
-    </div>
-    <div class="grid">
-      <div class="group">
-        <span>📍 জেলা / District</span>
-        <input type="text" name="district" placeholder="জেলা / District" required>
-      </div>
-      <div class="group">
-        <span>📌 উপজেলা / Upazila</span>
-        <input type="text" name="upazila" placeholder="উপজেলা / Upazila" required>
-      </div>
-    </div>
-    <div class="group">
-      <span>🏡 গ্রাম / Village</span>
-      <input type="text" name="village" placeholder="গ্রাম / Village" required>
-    </div>
-    <div class="grid">
-      <div class="group">
-        <span>🎂 বয়স / Age</span>
-        <input type="number" name="age" min="10" max="80" placeholder="বয়স / Age" required>
-      </div>
-      <div class="group">
-        <span>⚧ লিঙ্গ / Gender</span>
-        <select name="gender" required>
-          <option value="">নির্বাচন করুন / Select</option>
-          <option>পুরুষ / Male</option>
-          <option>মহিলা / Female</option>
-          <option>অন্যান্য / Other</option>
-        </select>
-      </div>
-    </div>
-    <div class="group">
-      <span>📞 মোবাইল / Mobile</span>
-      <input type="tel" name="mobile" pattern="01[3-9][0-9]{8}" placeholder="01XXXXXXXXX" required>
-    </div>
-    <div class="group">
-      <span>🌐 ফেসবুক প্রোফাইল / Facebook Profile</span>
-      <input type="url" name="facebook" placeholder="https://facebook.com/username" required>
-    </div>
-    <div class="upload">
-      <label>⬒ ছবি ১ / Image 1<input type="file" name="image1" hidden></label>
-      <label>⬒ ছবি ২ / Image 2<input type="file" name="image2" hidden></label>
-    </div>
-    <button type="submit">▣ সাবমিট / Submit ▣</button>
-  </form>
-  <div class="footer">
-    © 2026 SHARK CYBER SECURITY<br>
-    Secure • Protect • Defend
+  <div style="margin-top: 12px; font-size: 13px; text-align: center; color: #9fb4c0;">
+    Use these buttons to quickly contact team members based on their roles
   </div>
 </div>
+
+<!-- Options -->
+<div class="options">
+  <button onclick="toggle('details')">Toggle Details</button>
+  <button onclick="toggle('contact')">Toggle Contact</button>
+  <button onclick="toggle('rating')">Toggle Rating</button>
+</div>
+<input type="text" id="searchBar" placeholder="Search member by name or department..." onkeyup="searchMembers()">
+
+<!-- Team Members Section -->
+<div class="team" id="teamContainer">
+
+
+<!-- CEO -->
+<div class="member" data-name="MOHAMMAD BAYJID" data-department="Management">
+  <img src="https://i.imgur.com/K68V7m0.jpeg" alt="MOHAMMAD BAYJID">
+  <h4>MOHAMMAD BAYJID</h4>
+  <small>CEO & Founder</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801638007072" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/ILLEGAL.BAYJID" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: INTJ</div>
+  <div class="details">Department: Management</div>
+  <div class="stars rating" data-id="ceo">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- ADMINS 1-->
+<div class="Ceo" data-name="RAKIB ISLAM" data-department="Management">
+  <img src="https://i.imgur.com/V56eDhK.jpeg" alt="RAKIB ISLAM">
+  <h4>RAKIB ISLAM</h4>
+  <small>CEO</small>
+  <div class="contact details">
+    <a href="https://wa.me/880 1858-904113" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/profile.php?id=61579624827164" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: INTJ</div>
+  <div class="details">Department: Management</div>
+  <div class="stars rating" data-id="ceo">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- ADMINS 2 -->
+<div class="Admin" data-name="SCS MARUF" data-department="Management">
+  <img src="https://i.imgur.com/b88dmeH.jpeg" alt="SCS MARUF">
+  <h4>SCS MARUF</h4>
+  <small>ADMIN</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801813569560" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/ps.maruf.gaming.2" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: INTJ</div>
+  <div class="details">Department: Management</div>
+  <div class="stars rating" data-id="ceo">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- ADMINS 3 -->
+<div class="Manager" data-name="Kawshik Ahmed" data-department="Management">
+  <img src="https://i.imgur.com/p4At9ms.jpeg" alt="Kawshik Ahmed<">
+  <h4>Kawshik Ahmed</h4>
+  <small>manager</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801924743670" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/shahriar.rahman.shayar" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: INTJ</div>
+  <div class="details">Department: Management</div>
+  <div class="stars rating" data-id="ceo">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- Member 1 -->
+<div class="member" data-name="AHAD ISLAM" data-department="Technical">
+  <img src="https://i.imgur.com/u8SuTEG.jpeg" alt="AHAD ISLAM">
+  <h4>AHAD ISLAM</h4>
+  <small>Senior Security Analyst</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801331849967" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/terabapjanacsjoybabu" target="_blank"<📘 Facebook</a>
+  </div>
+  <div class="details">Personality: ENFP</div>
+  <div class="details">Department: Technical</div>
+  <div class="stars rating" data-id="joyahmed">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- Member 2 -->
+<div class="member" data-name="ARIYAN RAJU" data-department="Technical">
+  <img src="https://i.imgur.com/UOOjvBt.jpeg" alt="ARIYAN RAJU">
+  <h4>ARIYAN RAJU</h4>
+  <small>Admin</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801322287554" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/profile.php?id=61583237243049" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: ISTP</div>
+  <div class="details">Department: Technical</div>
+  <div class="stars rating" data-id="rexy">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- Member 3 -->
+<div class="member" data-name="FARAZ CHY" data-department="Research">
+  <img src="https://i.imgur.com/hvKuZpz.jpeg" alt="FARAZ CHY">
+  <h4>FARAZ CHY</h4>
+  <small>Threat Researcher</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801718042960" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/profile.php?id=61583452673881" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: INTP</div>
+  <div class="details">Department: Research</div>
+  <div class="stars rating" data-id="sakib">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- Member 4 -->
+<div class="Moderator" data-name="ARIYAN AHMED" data-department="Management">
+  <img src="https://i.imgur.com/AEnajyz.jpeg" alt="ARIYAN AHMED">
+  <h4>ARIYAN AHMED</h4>
+  <small>Operations Manager</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801894223571" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/profile.php?id=61585144912291" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: ENTJ</div>
+  <div class="details">Department: Management</div>
+  <div class="stars rating" data-id="ayesha">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- Member 5 -->
+<div class="member" data-name="" data-department="Technical">
+  <img src="https://files.catbox.moe/2lhgq5.jpg" alt="SIAM AHMED">
+  <h4>SIAM AHMED</h4>
+  <small>Network Security Engineer</small>
+  <div class="contact details">
+    <a href="https://wa.me/8801934974603" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/m.h.siam.806451" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: ESTJ</div>
+  <div class="details">Department: Technical</div>
+  <div class="stars rating" data-id="rifat">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+
+<!-- Member 6 -->
+<div class="member" data-name="SHAHADAT HOSSAIN" data-department="Management">
+  <img src="https://i.imgur.com/rVKZvcY.jpeg" alt="SHAHADAT HOSSAIN">
+  <h4>SHAHADAT HOSSAIN</h4>
+  <small>Operations Manager</small>
+  <div class="contact details">
+    <a href="https://wa.me/+971564427765" target="_blank">📞 WhatsApp</a>
+    <a href="https://www.facebook.com/onik1244" target="_blank">📘 Facebook</a>
+  </div>
+  <div class="details">Personality: ENTJ</div>
+  <div class="details">Department: Management</div>
+  <div class="stars rating" data-id="ayesha">
+    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+  </div>
+</div>
+</div>
+
+<!-- Member Information Form -->
+<div class="add-member-form">
+  <h3>➕ Add New Team Member</h3>
+  
+  <!-- PIN Section (Only creator can add members) -->
+  <div class="pin-section">
+    <input type="password" id="creatorPin" placeholder="Enter PIN (9696)" maxlength="4">
+    <button onclick="verifyPin()">Verify PIN</button>
+  </div>
+  
+  <!-- Form (Hidden by default) -->
+  <div id="memberForm" style="display:none;">
+    <div class="form-grid">
+      <input type="text" id="memberName" placeholder="Full Name" required>
+      <input type="text" id="memberRole" placeholder="Role/Position" required>
+      <select id="memberDepartment" required>
+        <option value="">Select Department</option>
+        <option value="Management">Management</option>
+        <option value="Technical">Technical</option>
+        <option value="Research">Research</option>
+        <option value="Support">Support</option>
+      </select>
+      <input type="text" id="memberPersonality" placeholder="Personality (e.g., INTJ)">
+      <input type="tel" id="memberWhatsApp" placeholder="WhatsApp Number">
+      <input type="text" id="memberFacebook" placeholder="Facebook Profile URL">
+      <input type="text" id="memberImage" placeholder="Image URL (optional)" value="https://files.catbox.moe/6ubnmf.jpeg">
+    </div>
+    <div class="form-buttons">
+      <button id="submitMember" onclick="addNewMember()">Add Member</button>
+      <button id="clearForm" onclick="clearMemberForm()">Clear Form</button>
+    </div>
+    <div style="margin-top: 12px; font-size: 12px; text-align: center; color: #9fb4c0;">
+      Note: New members are added temporarily to the page (will disappear on refresh). For permanent storage, backend integration is required.
+    </div>
+  </div>
+</div>
+
+<footer>
+Creator: <strong>Mohammad Rexy</strong> • SCS Cyber Security
+</footer>
+
+</div>
+
+<!-- Notification Modal -->
+<div class="modal" id="notificationModal">
+  <div class="modal-content">
+    <h3 id="modalTitle">Notification</h3>
+    <p id="modalMessage">This is a notification message.</p>
+    <button id="modalClose" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<button id="scrollBtn" onclick="scrollToTeam()">↓ Scroll to Members</button>
+
+<!-- Audio Element for Background Music -->
+<audio id="backgroundMusic" loop>
+  <source src="https://files.catbox.moe/vzsrsj.mp4" type="audio/mp4">
+  Your browser does not support the audio element.
+</audio>
+
 <script>
-const telegramBotToken = '8472395100:AAHXdUOX4G0KcXcwOfhOiA6acUu94BAIwLM'; // তোমার Bot Token
-const chatId = '6313533050'; // তোমার Chat ID
+// Music System
+const audio = document.getElementById('backgroundMusic');
+const playBtn = document.getElementById('playBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const stopBtn = document.getElementById('stopBtn');
+const volumeControl = document.getElementById('volumeControl');
+const musicStatus = document.getElementById('musicStatus');
 
-document.getElementById('scsForm').addEventListener('submit', async function(e){
-  e.preventDefault();
-  const formData = new FormData(this);
-
-  let message = '┏━━━━━━━━━━━━━━━━━━━━┓\n';
-  message += '┃ 🚀  *New SCS Registration*  🛡️ ┃\n';
-  message += '┗━━━━━━━━━━━━━━━━━━━━┛\n\n';
-
-  formData.forEach((value, key) => {
-    if(key !== 'image1' && key !== 'image2') {
-      message += `*${key.charAt(0).toUpperCase() + key.slice(1)}:* ${value}\n`;
-    }
-  });
-  message += '\n✅ Registration successfully submitted!';
-
-  try {
-    await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({chat_id: chatId, text: message, parse_mode: 'Markdown'})
+// Auto-play music on page load
+window.onload = function() {
+  // Try to play music automatically
+  setTimeout(() => {
+    audio.volume = 0.5;
+    audio.play().then(() => {
+      musicStatus.textContent = "Music: Playing";
+    }).catch(error => {
+      musicStatus.textContent = "Music: Click to play";
+      console.log("Auto-play prevented:", error);
     });
+  }, 1000);
+  
+  // Show welcome message
+  setTimeout(() => {
+    showNotification("Welcome to Shark Cyber Security", "Team management portal loaded successfully. Use the Call Down system for quick communications.");
+  }, 1500);
+};
 
-    for (let imgField of ['image1','image2']) {
-      const file = formData.get(imgField);
-      if(file && file.size > 0){
-        const reader = new FileReader();
-        await new Promise(resolve => {
-          reader.onload = async function(){
-            const form = new FormData();
-            form.append('chat_id', chatId);
-            form.append('photo', file);
-            form.append('caption', `📷 ${imgField}`);
-            await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendPhoto`, {
-              method: 'POST',
-              body: form
-            });
-            resolve();
-          }
-          reader.readAsDataURL(file);
-        });
-      }
-    }
-
-    alert('✅ Registration Sent with Images!');
-    this.reset();
-
-  } catch(err){
-    console.error(err);
-    alert('❌ Error sending to Telegram');
-  }
+// Music controls
+playBtn.addEventListener('click', () => {
+  audio.play();
+  musicStatus.textContent = "Music: Playing";
 });
+
+pauseBtn.addEventListener('click', () => {
+  audio.pause();
+  musicStatus.textContent = "Music: Paused";
+});
+
+stopBtn.addEventListener('click', () => {
+  audio.pause();
+  audio.currentTime = 0;
+  musicStatus.textContent = "Music: Stopped";
+});
+
+volumeControl.addEventListener('input', () => {
+  audio.volume = volumeControl.value;
+});
+
+// Toggle sections
+function toggle(cls){
+  document.querySelectorAll('.'+cls).forEach(e=>e.classList.toggle('hide'));
+}
+
+// Search members
+function searchMembers(){
+  const val=document.getElementById('searchBar').value.toLowerCase();
+  document.querySelectorAll('.member').forEach(m=>{
+    const name = m.dataset.name.toLowerCase();
+    const dept = m.dataset.department ? m.dataset.department.toLowerCase() : '';
+    m.style.display = (name.includes(val) || dept.includes(val)) ? 'block' : 'none';
+  });
+}
+
+// Rating system
+document.querySelectorAll('.stars.rating').forEach(starBox=>{
+  const id=starBox.dataset.id;
+  const saved=localStorage.getItem('rate_'+id)||0;
+  update(starBox,saved);
+  starBox.querySelectorAll('span').forEach((s,i)=>{
+    s.onclick=()=>{localStorage.setItem('rate_'+id,i+1); update(starBox,i+1);}
+  });
+});
+function update(box,val){
+  box.querySelectorAll('span').forEach((s,i)=>s.classList.toggle('active',i<val));
+}
+
+// Scroll button
+function scrollToTeam(){
+  document.getElementById('teamContainer').scrollIntoView({behavior:'smooth'});
+}
+
+// Call Down System Functions
+function callAllMembers() {
+  showNotification("Call All Members", "📢 Calling all SCS Cyber Security team members for an urgent meeting. Please check your communications.");
+}
+
+function callDepartment(department) {
+  showNotification(`Call ${department} Team`, `📢 Calling all ${department} team members. Please gather for a department briefing.`);
+}
+
+function emergencyCall() {
+  showNotification("🚨 EMERGENCY CALL", "URGENT: All SCS Cyber Security team members required immediately for critical security incident response!");
+}
+
+// PIN Verification System
+const CREATOR_PIN = "9696";
+let isPinVerified = false;
+
+function verifyPin() {
+  const enteredPin = document.getElementById('creatorPin').value;
+  if (enteredPin === CREATOR_PIN) {
+    isPinVerified = true;
+    document.getElementById('memberForm').style.display = 'block';
+    document.querySelector('.pin-section').style.display = 'none';
+    showNotification("PIN Verified", "✅ Creator access granted. You can now add new team members.");
+  } else {
+    showNotification("Access Denied", "❌ Incorrect PIN. Only the creator can add new members.");
+    document.getElementById('creatorPin').value = '';
+    document.getElementById('creatorPin').focus();
+  }
+}
+
+// Member Information Form Functions
+function addNewMember() {
+  if (!isPinVerified) {
+    showNotification("Access Required", "Please verify your PIN first to add new members.");
+    return;
+  }
+  
+  const name = document.getElementById('memberName').value;
+  const role = document.getElementById('memberRole').value;
+  const department = document.getElementById('memberDepartment').value;
+  const personality = document.getElementById('memberPersonality').value;
+  const whatsapp = document.getElementById('memberWhatsApp').value;
+  const facebook = document.getElementById('memberFacebook').value;
+  const image = document.getElementById('memberImage').value || 'https://files.catbox.moe/6ubnmf.jpeg';
+  
+  if (!name || !role || !department) {
+    showNotification("Form Error", "Please fill in at least Name, Role, and Department fields.");
+    return;
+  }
+  
+  // Create a unique ID for the new member
+  const memberId = name.toLowerCase().replace(/\s+/g, '') + Date.now();
+  
+  // Create new member element
+  const memberDiv = document.createElement('div');
+  memberDiv.className = 'member';
+  memberDiv.setAttribute('data-name', name);
+  memberDiv.setAttribute('data-department', department);
+  
+  memberDiv.innerHTML = `
+    <img src="${image}" alt="${name}" onerror="this.src='https://files.catbox.moe/6ubnmf.jpeg'">
+    <h4>${name}</h4>
+    <small>${role}</small>
+    <div class="contact details">
+      ${whatsapp ? `<a href="https://wa.me/${whatsapp}" target="_blank">📞 WhatsApp</a>` : ''}
+      ${facebook ? `<a href="${facebook}" target="_blank">📘 Facebook</a>` : ''}
+    </div>
+    ${personality ? `<div class="details">Personality: ${personality}</div>` : ''}
+    <div class="details">Department: ${department}</div>
+    <div class="stars rating" data-id="${memberId}">
+      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+    </div>
+  `;
+  
+  // Add to the team container
+  document.getElementById('teamContainer').appendChild(memberDiv);
+  
+  // Initialize rating for the new member
+  const starBox = memberDiv.querySelector('.stars.rating');
+  const saved = localStorage.getItem('rate_' + memberId) || 0;
+  update(starBox, saved);
+  starBox.querySelectorAll('span').forEach((s, i) => {
+    s.onclick = () => {
+      localStorage.setItem('rate_' + memberId, i + 1);
+      update(starBox, i + 1);
+    };
+  });
+  
+  // Clear form
+  clearMemberForm();
+  
+  // Show success message
+  showNotification("Member Added", `✅ ${name} has been added to the team as ${role} in the ${department} department.`);
+}
+
+function clearMemberForm() {
+  document.getElementById('memberName').value = '';
+  document.getElementById('memberRole').value = '';
+  document.getElementById('memberDepartment').value = '';
+  document.getElementById('memberPersonality').value = '';
+  document.getElementById('memberWhatsApp').value = '';
+  document.getElementById('memberFacebook').value = '';
+  document.getElementById('memberImage').value = 'https://files.catbox.moe/6ubnmf.jpeg';
+}
+
+// Modal Functions
+function showNotification(title, message) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalMessage').textContent = message;
+  document.getElementById('notificationModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('notificationModal').style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('notificationModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+}
 </script>
 </body>
-
 </html>
